@@ -5,6 +5,7 @@ export default function Homepage() {
   return (
     <main>
       <Navbar />
+      
       <div>Home page!</div>
       <DisplayStocks />
     </main>
