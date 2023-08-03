@@ -10,6 +10,7 @@ import configureStore from './redux/configureStore';
 import reportWebVitals from './reportWebVitals';
 import Homepage from './router/Homepage';
 import Detailpage from './router/Detailpage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     element: <Homepage />,
   },
   {
-    path: '/detail',
+    path: '/detail/:symbol/:name/:price/:change/:dayLow/:dayHigh/:marketCap/:volume/:exchange',
     element: <Detailpage />,
   },
 ]);

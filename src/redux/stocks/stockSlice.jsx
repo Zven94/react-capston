@@ -1,13 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const myUrl = 'https://financialmodelingprep.com/api/v3/quote/AAPL,NVDA,META,MSFT,INTC,TSLA,RIVN?apikey=212794e542583c32d527fc0587006b94';
-
-// export const stocksData = createAsyncThunk('stocks/stocksData', async () => {
-//   const response = await fetch(myUrl);
-//   const data = await response.json();
-//   return data;
-// });
+const myUrl = 'https://financialmodelingprep.com/api/v3/quote/AAPL,AMZN,MSFT,GOOGL,BRK.A,JNJ,JPM,PG,V,NVDA,META,INTC,TSLA,RIVN,AAL,AXP,T,AVT_p,BA,7751,CVX,C,KO,DOW,XOM,GE,GM,IBM,MA,MET,MU,NFLX,NKE,OXY,PYPL,PEP,PFE,GS,SBUX,UNA,WMT,WFC,?apikey=53bb981d8d215ae37819960394ac7247';
 
 export const stocksData = createAsyncThunk(
   'stocks/stocksData',
@@ -32,6 +26,14 @@ const stockSlice = createSlice({
   name: 'stocks',
   initialState,
   reducers: {
+    incrementCount: (state, action) => {
+      const { symbol } = action.payload;
+      const stock = state.stocks.find((stock) => stock.symbol === symbol);
+      if (stock) {
+        console.log(stock.views);
+        stock.views += 1;
+      }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -41,9 +43,17 @@ const stockSlice = createSlice({
           symbol: stock.symbol,
           name: stock.name,
           price: stock.price,
+          change: stock.change,
+          dayLow: stock.dayLow,
+          dayHigh: stock.dayHigh,
+          marketCap: stock.marketCap,
+          volume: stock.volume,
+          exchange: stock.exchange,
+          views: 0,
         })),
       }));
   },
 });
 
+export const { incrementCount } = stockSlice.actions;
 export default stockSlice.reducer;
