@@ -1,3 +1,4 @@
+import './Homepage.css';
 import { Col } from 'react-bootstrap';
 import Navbar from '../components/NavElement/NavElement';
 import DisplayStocks from '../components/displayData/displayStocks';

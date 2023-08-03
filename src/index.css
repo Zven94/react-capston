@@ -3,6 +3,7 @@ body {
   font-family:
     -apple-system,
     BlinkMacSystemFont,
+    'Lato',
     'Segoe UI',
     'Roboto',
     'Oxygen',
@@ -14,6 +15,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #5788E4;
+  padding: 0;
 }
 
 code {
