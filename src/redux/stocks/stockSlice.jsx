@@ -30,7 +30,6 @@ const stockSlice = createSlice({
       const { symbol } = action.payload;
       const stock = state.stocks.find((stock) => stock.symbol === symbol);
       if (stock) {
-        console.log(stock.views);
         stock.views += 1;
       }
     },
