@@ -1,8 +1,9 @@
 .list-group-item.even {
-  background-color: #3F62A4;
+  background-color: #3f62a4;
 }
+
 .list-group-item.odd {
-  background-color: #4369B2;
+  background-color: #4369b2;
 }
 
 .stocks-btn {

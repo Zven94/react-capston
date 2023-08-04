@@ -83,11 +83,11 @@ export default function Detailpage() {
               {exchange}
             </p>
           </Row>
+          <Link to="/" className="d-flex justify-content-center">
+            <Button type="submit" variant="secondary" className="mt-3"> &crarr; Close</Button>
+          </Link>
         </Col>
       </Container>
-      <Link to="/" className="d-flex justify-content-center">
-        <Button type="submit" variant="secondary" className="mt-3">Close</Button>
-      </Link>
     </main>
   );
 }
