@@ -64,7 +64,7 @@ Click [here](https://react-capstone-h4jz.onrender.com)
 
 ## Presentation
 
-[Watch the video]()
+[Watch the video](https://www.loom.com/share/d89629df47ed41548b0150167c5945d1?sid=f810be11-5932-4fd6-8ed3-9176c105dae1)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
